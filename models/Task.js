@@ -9,6 +9,11 @@ const TaskSchema = new Schema({
   completed: {
     type: Boolean,
     default: false
+  },
+  createdBy: {
+    type: mongoose.Types.ObjectId,
+    ref: "User",
+    required: true
   }
 }, { timestamps: true })
 
